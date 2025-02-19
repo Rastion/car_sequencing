@@ -5,12 +5,7 @@
     },
     "problem_type": "CarSequencing",
     "description": "A number of cars (each belonging to a specific class with a set of options) must be sequenced so that for each option, the number of cars requiring it does not exceed the allowed capacity in any consecutive block. The objective is to minimize the total number of capacity violations across all options and windows.",
-    "keywords": [
-      "car sequencing",
-      "production scheduling",
-      "constraint programming",
-      "NP-hard"
-    ],
+    "keywords": ["car sequencing", "scheduling", "production", "combinatorial", "sequencing", "optimization"],
     "data_format": {
       "instance_file": {
         "format": "First line: number of cars; number of options; number of classes. Second line: for each option, the maximum number of cars with that option in any block. Third line: for each option, the block size. Then, for each class: class index, number of cars in that class, followed by for each option a binary value (1 or 0) indicating whether the class requires the option."
