@@ -3,7 +3,7 @@
     "default_params": {
       "instance_file": "instances/4_72.in"
     },
-    "problem_type": "CarSequencing",
+    "problem_type": "Car Sequencing Problem",
     "description": "A number of cars (each belonging to a specific class with a set of options) must be sequenced so that for each option, the number of cars requiring it does not exceed the allowed capacity in any consecutive block. The objective is to minimize the total number of capacity violations across all options and windows.",
     "keywords": ["car sequencing", "scheduling", "production", "combinatorial", "sequencing", "optimization"],
     "data_format": {
