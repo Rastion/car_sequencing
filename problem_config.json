@@ -1,34 +1,38 @@
 {
-    "entry_point": "car_sequencing_problem:CarSequencingProblem",
-    "default_params": {
-      "instance_file": "instances/4_72.in"
-    },
-    "problem_type": "Car Sequencing Problem",
-    "description": "A number of cars (each belonging to a specific class with a set of options) must be sequenced so that for each option, the number of cars requiring it does not exceed the allowed capacity in any consecutive block. The objective is to minimize the total number of capacity violations across all options and windows.",
-    "keywords": ["car sequencing", "scheduling", "production", "combinatorial", "sequencing", "optimization"],
-    "data_format": {
-      "instance_file": {
-        "format": "First line: number of cars; number of options; number of classes. Second line: for each option, the maximum number of cars with that option in any block. Third line: for each option, the block size. Then, for each class: class index, number of cars in that class, followed by for each option a binary value (1 or 0) indicating whether the class requires the option."
-      }
-    },
-    "decision_variables": {
-      "sequence": {
-        "type": "list of int",
-        "description": "A permutation of indices (0 to nb_positions-1) representing the rearranged production sequence. Each index refers to a position in the initial production plan."
-      }
-    },
-    "objective": {
-      "type": "minimization",
-      "function": "Total capacity violations",
-      "description": "For each option and each window (of specified size) in the sequence, if the number of cars requiring the option exceeds the allowed maximum, the excess is counted as a violation. The objective is to minimize the sum of these violations."
-    },
-    "solution_representation": "A list of integers of length equal to the number of cars, representing a permutation of indices into the initial production plan.",
-    "compatible_optimizers": [
-      "genetic_algorithm",
-      "simulated_annealing",
-      "particle_swarm",
-      "tabu_search"
-    ],
-    "notes": "The car sequencing problem is NP-hard and appears in CSPLib. The instance file should follow the specified format."
+  "entry_point": "car_sequencing_problem:CarSequencingProblem",
+  "default_params": {
+    "instance_file": "instances/4_72.in"
+  },
+  "creator": "Rastion",
+  "type": "problem",
+  "problem_name": "Car sequencing problem",
+  "description": "A number of cars (each belonging to a specific class with a set of options) must be sequenced so that for each option, the number of cars requiring it does not exceed the allowed capacity in any consecutive block. The objective is to minimize the total number of capacity violations across all options and windows.",
+  "link_to_dataset": "https://github.com/Rastion/car_sequencing/blob/main/instances/4_72.in",
+  "keywords": [
+    "car sequencing",
+    "production-scheduling",
+    "constraint programming",
+    "NP-hard"
+  ],
+  "data_format": {
+    "instance_file": {
+      "format": "First line: number of cars; number of options; number of classes. Second line: for each option, the maximum number of cars with that option in any block. Third line: for each option, the block size. Then, for each class: class index, number of cars in that class, followed by for each option a binary value (1 or 0) indicating whether the class requires the option."
+    }
+  },
+  "decision_variables": {
+    "sequence": {
+      "type": "list of int",
+      "description": "A permutation of indices (0 to nb_positions-1) representing the rearranged production sequence. Each index refers to a position in the initial production plan."
+    }
+  },
+  "objective": {
+    "type": "minimization",
+    "function": "Total capacity violations",
+    "description": "For each option and each window (of specified size) in the sequence, if the number of cars requiring the option exceeds the allowed maximum, the excess is counted as a violation. The objective is to minimize the sum of these violations."
+  },
+  "solution_representation": "A list of integers of length equal to the number of cars, representing a permutation of indices into the initial production plan.",
+  "formulations": [
+    ""
+  ]
   }
   
